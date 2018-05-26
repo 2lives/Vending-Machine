@@ -14,6 +14,11 @@ module.exports = {
         price: 6.0,
         quantity: 2
     },
+    a4: {
+        item: 'Bugatti',
+        price: 10.0,
+        quantity: 1.0
+    },
     b1: {
         item: 'Ducati',
         price: 2.0,
