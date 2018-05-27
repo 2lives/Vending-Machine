@@ -39,16 +39,26 @@ describe('Vending Machine', () => {
                 expect(result).toEqual([21, 24, 22, 21, 23, 21, 120]);
             });
         });
-        describe('Given an invalid input for a singluar item to be restocked', () => {
+        describe('Given an invalid item for a singluar item to be restocked', () => {
             it('Should throw an error', () => {
                 const result = () => {
-                    expect(result).toThrow();
+                    vendingMachine.restockSingularInv({
+                        item: 'b50',
+                        quantity: 100
+                    });
                 };
+                expect(result).toThrow();
             });
         });
+
         describe('Given a valid input for a singular item to be restocked', () => {
             it('Should increment the specified item by the specified amount', () => {
-                const result = vendingMachine.restockSingularInv;
+                const result = vendingMachine.restockSingularInv({
+                    item: 'a1',
+                    quantity: 40
+                });
+                //equals 61 because the bulk 20 inv added in the previous test passed, therefore adding another 20 to the total stock
+                expect(result).toEqual(61);
             });
         });
     });
