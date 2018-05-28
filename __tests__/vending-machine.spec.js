@@ -139,6 +139,12 @@ describe('Vending Machine', () => {
                 expect(result).toThrow();
                 expect(result1).toThrow();
             });
+            describe('Given a valid input (dollar amount)', () => {
+                it('Should reduce the item stock by 1 and return the item as well as the change', () => {
+                    const result = vendingMachine.dispenseInvItem('a3', 9);
+                    expect(result).toEqual(['Ferrari', 3]);
+                });
+            });
         });
     });
 });
