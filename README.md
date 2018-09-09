@@ -2,8 +2,8 @@
 
 ## Description
 
-Wouldn't it be nice if a Lamborghini costed $5.00? Check out my vending machine!
-The vending machine is used for TDD with the assistance of Jest.
+Wouldn't it be nice if a Lamborghini cost $5.00? Check out my Vending Machine!
+The Vending Machine is a project developed with the help of TDD and Jest.
 
 ### Tests
 
